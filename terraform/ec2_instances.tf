@@ -32,6 +32,7 @@ resource "aws_instance" "instance" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
   count=3
+  key_name=<your key name>
   tags = {
     Name = "jk-instance-${count.index}"
   }
