@@ -33,7 +33,7 @@ resource "aws_instance" "instance" {
   instance_type = "t3.micro"
   count=3
   tags = {
-    Name = "instance-${count.index}"
+    Name = "jk-instance-${count.index}"
   }
 }
 
